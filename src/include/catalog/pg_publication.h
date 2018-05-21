@@ -63,13 +63,14 @@ typedef FormData_pg_publication *Form_pg_publication;
  * ----------------
  */
 
-#define Natts_pg_publication				6
+#define Natts_pg_publication				7
 #define Anum_pg_publication_pubname			1
 #define Anum_pg_publication_pubowner		2
 #define Anum_pg_publication_puballtables	3
 #define Anum_pg_publication_pubinsert		4
 #define Anum_pg_publication_pubupdate		5
 #define Anum_pg_publication_pubdelete		6
+#define Anum_pg_publication_rowfilter		7
 
 typedef struct PublicationActions
 {
@@ -83,6 +84,7 @@ typedef struct Publication
 	Oid			oid;
 	char	   *name;
 	bool		alltables;
+	char 	   *rowfilter;
 	PublicationActions pubactions;
 } Publication;
 

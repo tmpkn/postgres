@@ -3379,6 +3379,7 @@ typedef struct CreatePublicationStmt
 	char	   *pubname;		/* Name of of the publication */
 	List	   *options;		/* List of DefElem nodes */
 	List	   *tables;			/* Optional list of tables to add */
+	char 	   *row_filter;		/* Optional row filter query */
 	bool		for_all_tables; /* Special publication for all tables in db */
 } CreatePublicationStmt;
 
@@ -3392,6 +3393,7 @@ typedef struct AlterPublicationStmt
 
 	/* parameters used for ALTER PUBLICATION ... ADD/DROP TABLE */
 	List	   *tables;			/* List of tables to add/drop */
+	char 	   *row_filter;		/* Row filter query */
 	bool		for_all_tables; /* Special publication for all tables in db */
 	DefElemAction tableAction;	/* What action to perform with the tables */
 } AlterPublicationStmt;

@@ -4487,6 +4487,7 @@ _copyCreatePublicationStmt(const CreatePublicationStmt *from)
 	COPY_STRING_FIELD(pubname);
 	COPY_NODE_FIELD(options);
 	COPY_NODE_FIELD(tables);
+	COPY_STRING_FIELD(row_filter);
 	COPY_SCALAR_FIELD(for_all_tables);
 
 	return newnode;
@@ -4500,6 +4501,7 @@ _copyAlterPublicationStmt(const AlterPublicationStmt *from)
 	COPY_STRING_FIELD(pubname);
 	COPY_NODE_FIELD(options);
 	COPY_NODE_FIELD(tables);
+	COPY_STRING_FIELD(row_filter);
 	COPY_SCALAR_FIELD(for_all_tables);
 	COPY_SCALAR_FIELD(tableAction);
 
