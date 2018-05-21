@@ -34,6 +34,8 @@ CATALOG(pg_publication,6104)
 
 	Oid			pubowner;		/* publication owner */
 
+	char 	   *rowfilter;		/* row filter */
+
 	/*
 	 * indicates that this is special publication which should encompass all
 	 * tables in the database (except for the unlogged and temp ones)
